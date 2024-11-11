@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-284LK47R2Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-284LK47R2Q');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitchenChronicles.com</title>
+    <link rel="icon" type="image/x-icon" href="/Images/home.png">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            margin-top: 60px; /* Space for fixed nav */
+        }
+
+        nav {
+            background: #000000;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            flex-wrap: wrap;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav ul {
+            display: inline-flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #44f84d;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .search-container label {
+            font-weight: bold;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .search-container input {
+            padding: 0.5em;
+            border: 1px solid #15da60;
+            border-radius: 5px;
+            width: 200px;
+            max-width: 100%;
+        }
+
+        .img {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .center {
+            position: relative;
+            z-index: 1;
+        }
+
+        .center .title {
+            font-size: 35px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .center .sub_title {
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .center .btns {
+            margin-top: 20px;
+        }
+
+        .center .btns button {
+            height: 50px;
+            width: 150px;
+            border-radius: 25px;
+            border: 2px solid #009688;
+            background: transparent;
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: 550;
+            padding: 0 10px;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            transition: border 0.3s;
+        }
+
+        .center .btns button span {
+            background: #009688;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: width 0.5s;
+        }
+
+        .center .btns button:hover span {
+            width: 100%;
+        }
+
+        .center .btns button:hover {
+            border: none;
+        }
+        footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 30px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #44f84d;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #44f84d;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 10px 20px;
+    }
+
+    .footer-logo {
+        font-size: 20px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    .footer-social a {
+        font-size: 18px;
+    }
+}
+
+
+        @media all and (max-width: 768px) {
+            nav {
+                padding: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #000;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 1;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                padding: 15px;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .search-container {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .search-container label {
+                margin-bottom: 5px;
+            }
+
+            .search-container input {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .center .title {
+                font-size: 25px;
+            }
+
+            .center .sub_title {
+                font-size: 20px;
+            }
+
+            .center .btns button {
+                height: 45px;
+                width: 130px;
+                font-size: 16px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Kitchen Chronicles</div>
+        <ul>
+            <li class="items"><a href="#">Home</a></li>
+            <li class="items"><a href="#about">About Us</a></li>
+            <li class="items"><a href="http://127.0.0.1:5500/recipe.html">Recipes</a></li>
+            <li class="items"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="search-container">
+            
+            <input type="text" id="search" placeholder="Search recipes..." oninput="applyFilters()">
+        </div>
+        <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <div class="img">
+        <div class="center">
+            <div class="title">Welcome to Kitchen Chronicles</div>
+            <div class="sub_title">Discover Delicious Recipes and Cooking Tips</div>
+            <div class="btns">
+                <button onclick="window.location.href='#recipes';"><span></span>Explore Recipes</button>
+                <button onclick="window.location.href='#contact';"><span></span>Contact Us</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">Kitchen Chronicles</div>
+            <div class="footer-links">
+                <a href="#">Home</a> |
+                <a href="#about">About Us</a> |
+                <a href="#recipes">Recipes</a> |
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2024 Kitchen Chronicles. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Recipe list for demo purposes -->
+    <div id="recipe-list"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#menu-toggle').click(function(){
+                $('nav ul').toggleClass("show");
+            });
+        });
+
+       
+        let selectedCategory = 'breakfast';
+
+        function displayRecipes(filteredRecipes) {
+            const recipeList = document.getElementById('recipe-list');
+            recipeList.innerHTML = '';
+            filteredRecipes.forEach(recipe => {
+                const recipeCard = document.createElement('div');
+                recipeCard.className = 'recipe';
+                recipeCard.innerHTML = `
+                    <img src="${recipe.image}" alt="${recipe.name}">
+                    <h3>${recipe.name}</h3>
+                    <p>${recipe.description}</p>
+                    <p>Time: ${recipe.time} mins</p>
+                    <ul>${recipe.recipeSteps.map(step => <li>${step}</li>).join('')}</ul>
+                `;
+                recipeList.appendChild(recipeCard);
+            });
+        }
+
+        function applyFilters() {
+            const searchQuery = document.getElementById('search').value.toLowerCase();
+            const filteredRecipes = recipes.filter(recipe => 
+                recipe.name.toLowerCase().includes(searchQuery) && recipe.category === selectedCategory
+            );
+            displayRecipes(filteredRecipes);
+        }
+
+        // Initial display of recipes
+        displayRecipes(recipes);
+    </script>
+</body>
+</html>
